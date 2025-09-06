@@ -1,0 +1,57 @@
+{% extends "layouts/layout_tg_webapp.j2" %}
+
+{% block title %}📜 Аниме-запросы в Ero no Sekai - Shinigami{% endblock %}
+
+{% block head %}
+    <style>
+        .service-title {
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .command {
+            padding-left: 1rem;
+        }
+
+        .param {
+            font-style: italic;
+            color: #555;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: #777;
+            padding-left: 2rem;
+        }
+
+        .emoji {
+            font-style: normal;
+        }
+
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>🎌 Аниме-запросы 🎌</h2>
+        <ul>
+            <li class="service-title">📖 Shikimori (основной сервис):</li>
+            <li class="command"><code>/ssra</code> — Случайное аниме <span class="emoji">🎲</span></li>
+            <li class="command"><code>/ssa {<span class="param">title_name</span>}</code> — Поиск аниме по названию <span class="emoji">🔍</span></li>
+            <li class="note"><span class="param">title_name</span> — название аниме (например: Ту лав ру, Евангелион)</li>
+            <li class="command"><code>/ssag {<span class="param">genre</span>} {<span class="param">rating</span>}</code> — Подборка аниме по жанру и рейтингу <span class="emoji">🔍</span></li>
+            <li class="note"><span class="param">genre</span> — жанр (например: этти, романтика)</li>
+            <li class="note"><span class="param">rating</span> — рейтинг (по умолчанию 7, можно не указывать)</li>
+            <li class="command"><code>/ssc {<span class="param">character_name</span>}</code> — Подборка персонажей по имени <span class="emoji">🔍</span></li>
+            <li class="note"><span class="param">character_name</span> — имя персонажа (например: Сэнко, Нана Девилюк)</li>
+
+            <li class="service-title">🌐 AniList (иностранный сервис, возможны ошибки):</li>
+            <li class="command"><code>/asra</code> — Случайное аниме <span class="emoji">🎲</span></li>
+            <li class="command"><code>/asa {<span class="param">title_name</span>}</code> — Поиск аниме по названию <span class="emoji">🔍</span></li>
+            <li class="note"><span class="param">title_name</span> — название аниме (например: Сэнко, Ту лав ру)</li>
+        </ul>
+        <div class="button-list">
+            <a class="nav-button" href="/tg_webapp/">↩ Назад</a>
+        </div>
+    </section>
+{% endblock %}

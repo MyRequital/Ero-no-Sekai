@@ -1,0 +1,200 @@
+├── .dev
+│   ├── deployment_data.md
+│   ├── git_push.txt
+│   ├── project_tree.txt
+│   ├── show_tree.py
+│   └── supabase-ca.crt
+├── _cache
+│   ├── anime_cache
+│   │   └── anime_cache_by_name.json
+│   ├── temp
+│   │   └── __init__.py
+│   └── __init__.py
+├── _configs
+│   ├── __init__.py
+│   ├── config.py
+│   ├── config_commands.py
+│   ├── config_io.py
+│   ├── config_utils.py
+│   └── log_config.py
+├── api
+│   ├── anilist_api
+│   │   ├── __init__.py
+│   │   └── anilist_requests.py
+│   ├── kinopoisk_api
+│   │   ├── __init__.py
+│   │   └── kinopoisk_requests.py
+│   ├── shikimori_api
+│   │   ├── __init__.py
+│   │   └── shikimori_requests.py
+│   ├── supabase_api
+│   │   ├── __init__.py
+│   │   ├── supabase_loading_icon.py
+│   │   └── supabase_uploading_icon.py
+│   └── __init__.py
+├── assets
+│   ├── fonts
+│   │   ├── __init__.py
+│   │   └── _FONTS_CREDITS.md
+│   ├── readme
+│   │   ├── readme_screenshots
+│   │   └── __init__.py
+│   ├── users_icon_avatars
+│   │   └── __init__.py
+│   └── __init__.py
+├── data
+│   ├── __init__.py
+│   ├── anime_girls.py
+│   ├── bad_words.py
+│   ├── cities.py
+│   ├── commands_data.py
+│   ├── funny_names.py
+│   ├── quotes.py
+│   ├── shikimori_genres.py
+│   ├── shikimori_genres_id_to_name.py
+│   └── welcome_messages.py
+├── database
+│   ├── __init__.py
+│   ├── anime_cache_repository.py
+│   ├── bot_data.db
+│   ├── repositories.py
+│   ├── users_data_middleware.py
+│   └── users_data_repository.py
+├── handlers
+│   ├── carousels
+│   │   ├── __init__.py
+│   │   ├── carousel_handlers.py
+│   │   └── character_carousel_handlers.py
+│   ├── commands
+│   │   ├── __init__.py
+│   │   ├── admin_commands.py
+│   │   └── commands.py
+│   ├── games
+│   │   ├── __init__.py
+│   │   └── city_games_handlers.py
+│   ├── inline_anime
+│   │   ├── __init__.py
+│   │   └── inline_anime.py
+│   ├── __init__.py
+│   ├── callbacks.py
+│   ├── chat_member.py
+│   ├── messages.py
+│   ├── movies_commands.py
+│   └── user_data_handlers.py
+├── keyboards
+│   ├── __init__.py
+│   ├── inline.py
+│   └── reply.py
+├── services
+│   ├── supabase
+│   │   ├── __init__.py
+│   │   ├── supabase_client.py
+│   │   └── supabase_instance.py
+│   └── __init__.py
+├── states
+│   ├── __init__.py
+│   └── game_state.py
+├── tests
+│   ├── .pytest_cache
+│   │   ├── v
+│   │   │   └── cache
+│   │   │       ├── lastfailed
+│   │   │       ├── nodeids
+│   │   │       └── stepwise
+│   │   ├── .gitignore
+│   │   ├── CACHEDIR.TAG
+│   │   └── README.md
+│   ├── api_tests
+│   │   ├── __init__.py
+│   │   └── shikimori_tests.py
+│   └── __init__.py
+├── tools
+│   ├── __init__.py
+│   ├── access_lvl_cache.py
+│   ├── cache_tools.py
+│   ├── common_utils.py
+│   ├── env_tools.py
+│   ├── inline_query_tools.py
+│   └── member_tools.py
+├── web_app
+│   ├── app
+│   │   ├── __init__.py
+│   │   └── config.py
+│   ├── endpoints
+│   │   ├── bot_commands_endpoints
+│   │   │   ├── __init__.py
+│   │   │   ├── admin_commands.py
+│   │   │   ├── anime_commands.py
+│   │   │   ├── index.py
+│   │   │   ├── main_commands.py
+│   │   │   └── profile_commands.py
+│   │   ├── errors
+│   │   │   ├── __init__.py
+│   │   │   ├── errors_4xx.py
+│   │   │   └── errors_5xx.py
+│   │   ├── tg_webapp_endpoints
+│   │   │   ├── __init__.py
+│   │   │   ├── anime_quires.py
+│   │   │   ├── buy_rules.py
+│   │   │   ├── free_rules.py
+│   │   │   ├── help.py
+│   │   │   ├── index.py
+│   │   │   ├── policy.py
+│   │   │   ├── price_list.py
+│   │   │   ├── staff.py
+│   │   │   └── text_quires.py
+│   │   ├── __init__.py
+│   │   ├── about.py
+│   │   ├── index.py
+│   │   ├── kodik.py
+│   │   └── watch.py
+│   ├── other
+│   │   └── kodik.txt
+│   ├── static
+│   │   ├── bot_preview_images
+│   │   │   └── __init__.py
+│   │   ├── pictures
+│   │   ├── __init__.py
+│   │   └── favicon64.ico
+│   ├── templates
+│   │   ├── bot_commands
+│   │   │   ├── __init__.py
+│   │   │   ├── admin_commands.j2
+│   │   │   ├── anime_commands.j2
+│   │   │   ├── index.j2
+│   │   │   ├── main_commands.j2
+│   │   │   └── profile_commands.j2
+│   │   ├── errors
+│   │   │   ├── __init__.py
+│   │   │   ├── error_400.j2
+│   │   │   ├── error_401.j2
+│   │   │   ├── error_403.j2
+│   │   │   ├── error_404.j2
+│   │   │   └── error_500.j2
+│   │   ├── layouts
+│   │   │   ├── layout_main_page.j2
+│   │   │   └── layout_tg_webapp.j2
+│   │   ├── tg_webapp
+│   │   │   ├── __init__.py
+│   │   │   ├── anime_quires.j2
+│   │   │   ├── buy_rules.j2
+│   │   │   ├── free_rules.j2
+│   │   │   ├── help.j2
+│   │   │   ├── index.j2
+│   │   │   ├── policy.j2
+│   │   │   ├── price_list.j2
+│   │   │   ├── staff.j2
+│   │   │   └── text_quires.j2
+│   │   ├── __init__.py
+│   │   ├── about.j2
+│   │   ├── iFrame.j2
+│   │   └── index.j2
+│   ├── __init__.py
+│   └── run.py
+├── .env
+├── .env_sample
+├── .gitignore
+├── main.py
+├── Procfile
+├── README.md
+└── requirements.txt

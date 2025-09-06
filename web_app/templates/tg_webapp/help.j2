@@ -1,0 +1,88 @@
+{% extends "layouts/layout_tg_webapp.j2" %}
+
+{% block title %}📜 Помощь в Ero no Sekai - Shinigami{% endblock %}
+
+{% block head %}
+    <style>
+        section {
+            margin-bottom: 2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #000; /* Весь текст чёрный */
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin: 0.4rem 0;
+            padding: 0.3rem 0;
+            font-size: 0.95rem;
+        }
+
+        b, i {
+            font-weight: normal;
+            font-style: normal;
+            color: inherit; /* Убираем цветовые выделения */
+        }
+
+
+
+        .button-list {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>🌳 Основные команды</h2>
+        <ul>
+            <li><b>/start</b> — подтверждение вступления в группу</li>
+            <li><b>/anime_quires - /aq</b> — все типы аниме-запросов с примерами</li>
+            <li><b>/text_quires - /tq</b> — как работать с текстовыми запросами</li>
+            <li><b>/quote - /q</b> — цитаты и генерация</li>
+            <li><b>/help</b> — это меню помощи</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>💎 Премиум доступ</h2>
+        <ul>
+            <li><b>/price_list - /pl</b> — тарифы, пакеты и условия</li>
+            <li><b>/buy_rules - /br</b> — правила VIP-группы</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>👤 Аккаунт</h2>
+        <ul>
+            <li><b>/profile_menu - /pm</b> — методы работы с профилем</li>
+            <li><b>/me</b> — информация о вашем аккаунте</li>
+            <li><b>/whois (@username)</b> — информация об аккаунте @username</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>📜 Документы</h2>
+        <ul>
+            <li><b>/free_rules - /fr</b> — правила бесплатного чата</li>
+            <li><b>/policy</b> — политика конфиденциальности</li>
+        </ul>
+    </section>
+
+    <div class="button-list">
+        <a class="nav-button" href="/tg_webapp/">↩ Назад</a>
+    </div>
+{% endblock %}

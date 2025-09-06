@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Ero no Sekai: Shinigami{% endblock %}</title>
+    <link rel="preload" as="image" href="/static/favicon64.ico" type="image/x-icon">
+    <link rel="icon" href="/static/favicon64.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* === Базовые стили текста для всех страниц === */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #000;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin: 0;
+            padding: 0 1rem;
+        }
+
+        header {
+            text-align: center;
+            margin: 8px auto;
+        }
+
+        header img {
+            width: 640px;
+            height: 360px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.6rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.3rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 0.4rem 0;
+            padding: 0.3rem 0;
+        }
+
+        b, i {
+            font-weight: normal;
+            font-style: normal;
+            color: inherit;
+        }
+
+        .button-list {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px 10px;
+        }
+
+
+        .nav-button {
+            display: block;
+            text-align: center;
+            background-color: #3390ec;
+            color: #000000;
+            padding: 12px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .nav-button:hover {
+            background-color: #2874c8;
+        }
+    </style>
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+    <header>
+        <img src="https://ero-no-sekai.up.railway.app/static/pictures/tg_webapp_icon.jpg"
+             alt="Ero no Sekai логотип">
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <script>
+        (function () {
+            const tg = window.Telegram?.WebApp;
+            if (!tg || !tg.initDataUnsafe?.start_param) return;
+
+            const param = tg.initDataUnsafe.start_param;
+            const routes = {
+                "anime_quires": "/tg_webapp/anime_quires",
+                "buy_rules": "/tg_webapp/buy_rules",
+                "free_rules": "/tg_webapp/free_rules",
+                "help": "/tg_webapp/help",
+                "policy": "/tg_webapp/policy",
+                "price_list": "/tg_webapp/price_list",
+                "staff": "/tg_webapp/staff",
+                "text_quires": "/tg_webapp/text_quires"
+            };
+
+            const destination = routes[param];
+            if (destination) {
+                window.location.href = destination;
+            }
+        })();
+    </script>
+
+</body>
+</html>

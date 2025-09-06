@@ -1,0 +1,20 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+.env
+.dev/deployment_data.md
+.dev/supabase-ca.crt
+.idea/
+
+_configs/config.json
+
+# Игнор временных и кэш файлов
+_cache/anime_cache/anime_cache_by_name.json
+_cache/temp

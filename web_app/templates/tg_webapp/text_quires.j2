@@ -1,0 +1,59 @@
+{% extends "layouts/layout_tg_webapp.j2" %}
+
+{% block title %}📜 Текстовые команды | Ero no Sekai - Shinigami{% endblock %}
+
+{% block head %}
+    <style>
+        .button-list {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>🌳 Доступные команды:</h2>
+
+        <div class="command-group">
+            <h3>Погода</h3>
+            <div class="command-item">Игорь погода {город}</div>
+            <div class="command-example">Пример: Игорь погода Москва</div>
+        </div>
+
+        <div class="command-group">
+            <h3>Игры</h3>
+            <div class="command-item">Игорь поиграем</div>
+            <div class="command-example">Вызывает меню игр</div>
+        </div>
+
+        <div class="command-group">
+            <h3>Идентификация</h3>
+            <div class="command-item">Игорь кто я</div>
+            <div class="command-example">Ваше место в анимешной пищевой цепи</div>
+        </div>
+
+        <div class="command-group">
+            <h3>Вероятность события</h3>
+            <div class="command-item">Игорь какова вероятность того что {запрос}</div>
+            <div class="command-example">Вычисляет вероятность события</div>
+        </div>
+
+        <div class="command-group">
+            <h3>Прощение</h3>
+            <div class="command-item">Игорь {извинение}</div>
+            <div class="command-example">Как говорили Великие люди, "Пппонять и прррростить"</div>
+        </div>
+
+        <div class="command-group">
+            <h3>Подтверждение</h3>
+            <div class="command-item">Игорь {вопрос} ?</div>
+            <div class="command-example">Подтверждает или опровергает вопрос</div>
+        </div>
+    </section>
+
+    <div class="button-list">
+        <a class="nav-button" href="/tg_webapp/">↩ Назад</a>
+    </div>
+{% endblock %}

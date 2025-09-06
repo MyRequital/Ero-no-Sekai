@@ -1,0 +1,14 @@
+{% extends "layouts/layout_main_page.j2" %}
+
+{% block title %}О проекте | Ero no Sekai{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="text-block">
+            <svg class="blood-drop" viewBox="0 0 12 20" width="12" height="20">
+                <path d="M6 0 C9 6, 12 8, 6 20 C0 8, 3 6, 6 0" fill="darkred"/>
+            </svg>
+            {{ about_text | safe }}
+        </div>
+    </div>
+{% endblock %}

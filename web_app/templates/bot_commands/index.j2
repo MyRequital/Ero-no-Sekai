@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О командах бота</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: {{ background }};
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+        color: {{ text_color }};
+        position: relative;
+    }
+
+    @media (max-width: 768px) {
+        body {
+            background-size: cover;
+        }
+    }
+
+    .button {
+        padding: 15px 30px;
+        background-color: {{ button_color }};
+        border: none;
+        border-radius: 8px;
+        color: {{ button_text_color }};
+        font-size: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        margin-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .button {
+            font-size: 16px;
+            padding: 12px 20px;
+        }
+    }
+
+    .button:hover {
+        background-color: {{ button_hover_color }};
+    }
+
+    .qr-container {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        text-align: center;
+        color: {{ text_color }};
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .qr-code {
+        width: 120px;
+        height: 120px;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .buttons-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 12px;
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="qr-container">
+        <img src="{{ qr_image }}" alt="QR Code" class="qr-code" />
+        <div>Наша группа</div>
+    </div>
+
+    <div class="buttons-wrapper">
+        <a href="/bot_commands/main" class="button">Основные</a>
+        <a href="/bot_commands/admin" class="button">Админские</a>
+        <a href="/bot_commands/profile" class="button">Профиль</a>
+        <a href="/bot_commands/anime" class="button">Аниме</a>
+        <a href="/bot_commands" class="button">Назад</a>
+    </div>
+
+
+</body>
+</html>

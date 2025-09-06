@@ -1,0 +1,124 @@
+{% extends "layouts/layout_main_page.j2" %}
+
+{% block head %}
+    {{ super() }}
+    <style>
+        .swiper-container {
+            width: 90%;
+            max-width: 720px;
+            aspect-ratio: 16 / 9;
+            margin: 40px auto;
+            padding: 0 40px;
+            border-radius: 16px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: scale(0.9);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0.5;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .swiper-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 12px;
+        }
+
+        .swiper-slide-active {
+            transform: scale(1);
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #d11626;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            margin: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-button-next {
+            right: 0;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+{% endblock %}
+
+{% block swiper_content %}
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/static/bot_preview_images/preview1.png" alt="Скрин 1"></div>
+                <div class="swiper-slide"><img src="/static/bot_preview_images/preview2.png" alt="Скрин 2"></div>
+                <div class="swiper-slide"><img src="/static/bot_preview_images/preview3.png" alt="Скрин 3"></div>
+                <div class="swiper-slide"><img src="/static/bot_preview_images/preview4.png" alt="Скрин 4"></div>
+                <div class="swiper-slide"><img src="/static/bot_preview_images/preview5.png" alt="Скрин 5"></div>
+                <div class="swiper-slide"><img src="/static/bot_preview_images/preview6.png" alt="Скрин 6"></div>
+                <div class="swiper-slide"><img src="/static/bot_preview_images/preview7.png" alt="Скрин 7"></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+{% endblock %}
+
+{% block body %}
+    {{ super() }}
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            spaceBetween: -40,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 4000,
+            },
+        });
+    </script>
+
+{% endblock %}

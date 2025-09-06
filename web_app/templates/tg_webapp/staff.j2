@@ -1,0 +1,26 @@
+{% extends "layouts/layout_tg_webapp.j2" %}
+
+{% block title %}📜 Администрация | Ero no Sekai - Shinigami{% endblock %}
+
+{% block head %}
+    <style>
+        .button-list {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 10px 10px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>Список актуальных модераторов и администраторов</h2>
+        <ul>
+            <li>@ZorngeistQual</li>
+            <li>@KOPR0M</li>
+        </ul>
+        <div class="button-list">
+            <a class="nav-button" href="/tg_webapp/">↩ Назад</a>
+        </div>
+    </section>
+{% endblock %}

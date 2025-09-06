@@ -1,0 +1,83 @@
+{% extends "layouts/layout_tg_webapp.j2" %}
+
+{% block title %}📜 Главная | Ero no Sekai - Shinigami{% endblock %}
+
+{% block head %}
+    <style>
+        .main-page {
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .main-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .button-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 10px;
+        }
+
+        .nav-button {
+            display: block;
+            text-align: center;
+            background-color: #3390ec;
+            color: #000000;
+            padding: 12px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .nav-button:hover {
+            background-color: #2874c8;
+        }
+
+        .welcome-message {
+            background-color: #f1f1f1;
+            padding: 16px;
+            border-radius: 12px;
+            margin: 20px 20px 0 20px;
+            font-size: 0.95rem;
+            color: #111;
+            line-height: 1.5;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <section class="welcome-message">
+        {% if name %}
+            👋 <b>{{ name }}, добро пожаловать в</b> <i>Ero no Sekai: Yami no Yokubō</i>!<br><br>
+            ✅ Ты уже <b>подтвердил вступление</b> в группу.<br><br>
+            📜 <b>Пожалуйста, ознакомься с актуальными <a href="/tg_webapp/free_rules" target="_blank">правилами</a>:</b><br>
+            💬 Не стесняйся задавать вопросы в <a href="https://t.me/EroNoSekai_YamiNoYokubo/2" target="_blank">нашем чате</a>, будь вежлив и наслаждайся атмосферой!
+        {% else %}
+             <div class="block">
+            <ul>
+                <li>→ <a href="https://t.me/EroNoSekai_YamiNoYokubo/2" target="_blank">Наш чат</a></li>
+                <li>→ <a href="https://t.me/ZorngeistQual" target="_blank">Связь с администратором</a></li>
+            </ul>
+        </div>
+        {% endif %}
+    </section>
+
+    <section class="main-page">
+        <h2 class="main-title">Главная</h2>
+        <div class="button-list">
+            <a class="nav-button" href="/tg_webapp/help">❓ Помощь</a>
+            <a class="nav-button" href="/tg_webapp/price_list">💰 Прайс-лист</a>
+            <a class="nav-button" href="/tg_webapp/anime_quires">📺 Аниме-запросы</a>
+            <a class="nav-button" href="/tg_webapp/text_quires">🌐 Текстовые запросы</a>
+            <a class="nav-button" href="/tg_webapp/free_rules">🎁 Правила бесплатной группы</a>
+            <a class="nav-button" href="/tg_webapp/buy_rules">🛒 Правила платной группы</a>
+            <a class="nav-button" href="/tg_webapp/policy">📜 Политика</a>
+            <a class="nav-button" href="/tg_webapp/staff">👥 Администрация</a>
+        </div>
+    </section>
+{% endblock %}

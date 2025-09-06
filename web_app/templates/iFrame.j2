@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Смотреть {{ title_type }} {{ title_name }} онлайн на портале Ero no Sekai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" href="/static/favicon64.ico" type="image/x-icon">
+    <link rel="icon" href="/static/favicon64.ico" type="image/x-icon">
+
+    <!-- Open Graph meta -->
+    <meta property="og:title" content="Смотреть {{ title_type }} {{ title_name }} онлайн" />
+    <meta property="og:description" content="{{ title_name }} в лучшем качестве на портале Ero no Sekai" />
+    <meta property="og:image" content="{{ preview_poster_image }}" />
+    <meta property="og:url" content="{{ full_page_url }}" />
+    <meta property="og:type" content="video.other" />
+
+    <!-- Twitter Card meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Смотреть {{ title_type }} {{ title_name }} онлайн" />
+    <meta name="twitter:description" content="{{ title_name }} в лучшем качестве на портале Ero no Sekai" />
+    <meta name="twitter:image" content="{{ preview_poster_image }}" />
+
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: #111;
+            font-family: Arial, sans-serif;
+        }
+
+        iframe {
+            border: none;
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+
+        noscript {
+            color: white;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="{{ iFrame_url }}" allowfullscreen loading="lazy"></iframe>
+    <noscript>Пожалуйста, включите JavaScript для просмотра содержимого.</noscript>
+</body>
+</html>

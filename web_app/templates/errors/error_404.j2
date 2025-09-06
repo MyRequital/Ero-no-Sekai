@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Error 404 - Shinigami</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            text-align: center;
+            padding: 2em;
+        }
+        .error-container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 2em;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        }
+        .error-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 16px; /* Скругление углов */
+            margin-bottom: 1.5em;
+        }
+        .error-title {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        .error-description {
+            font-size: 1.1em;
+            margin-bottom: 1.5em;
+        }
+        .error-suggestion {
+            background-color: #f0f0f0;
+            padding: 1em;
+            border-radius: 10px;
+            margin-bottom: 1em;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <img src="{{ image_url }}" alt="Иллюстрация ошибки" class="error-image">
+
+        <div class="error-title">{{ error_code }} — {{ error_message }}</div>
+        <div class="error-description">{{ error_description }}</div>
+
+        <div class="error-suggestion">
+            <strong>Что можно сделать:</strong>
+            <p>{{ suggestion_1 }}</p>
+        </div>
+        <div class="error-suggestion">
+            <strong>Альтернативный вариант:</strong>
+            <p>{{ suggestion_2 }}</p>
+        </div>
+        <div class="error-suggestion">
+            <strong>Если ничего не помогло:</strong>
+            <p>Напишите <a href="t.me/zorngeistqual" target="_blank">администратору</a> </p>
+        </div>
+    </div>
+</body>
+</html>
